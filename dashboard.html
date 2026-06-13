@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComiLá – Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- theme.js aplicado cedo para evitar flash de tema errado -->
+    <script src="theme.js"></script>
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- ========== SIDEBAR ========== -->
+        <nav class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon"><img src="Image/Gemini_Generated_Image_rf29t2rf29t2rf29.png" alt="Logo ComiLá"
+                        style="
+                         width:100%;
+                         height:100%;
+                         object-fit:contain;
+                         border-radius: 50px;">
+                </span>
+                <span class="brand-name">ComiLá</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html">
+                        <span class="nav-icon">🏠</span> Dashboard
+                    </a></li>
+                <li><a href="historico.html">
+                        <span class="nav-icon">📋</span> Histórico
+                    </a></li>
+                <li><a href="review.html">
+                        <span class="nav-icon">⭐</span> Reviews
+                    </a></li>
+                <li><a href="settings.html">
+                        <span class="nav-icon">⚙️</span> Configurações
+                    </a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn-theme" id="theme-toggle-sidebar">
+                    <span class="theme-icon">🌙</span>
+                    Alternar tema
+                </button>
+            </div>
+        </nav>
+
+        <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+        <main class="main-content">
+
+            <div class="page-header">
+                <h1>Onde comer hoje? 🍴</h1>
+                <p>Pesquisa uma cidade e descobre os melhores restaurantes.</p>
+            </div>
+
+            <!-- Barra de pesquisa de cidades -->
+            <div class="search-wrapper">
+                <label class="search-label" for="search-input">Pesquisar cidade</label>
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Ex: Blumenau, São Paulo…" autocomplete="off">
+                    <ul id="results-list" class="results-list"></ul>
+                </div>
+            </div>
+
+            <!-- Título da secção + grid de restaurantes -->
+            <p class="section-title" id="section-label">Todos os restaurantes</p>
+            <div id="restaurantes-tela" class="restaurantes-grid"></div>
+
+        </main>
+    </div>
+
+    <!-- Toast de notificação (injetado pelo theme.js) -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

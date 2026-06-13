@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComiLá – Configurações</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- ========== SIDEBAR ========== -->
+        <nav class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">
+                    <img src="Image/Gemini_Generated_Image_rf29t2rf29t2rf29.png" alt="Logo ComiLá" style="
+                         width:100%;
+                         height:100%;
+                         object-fit:contain;
+                         border-radius: 50px">
+                </span>
+                <span class="brand-name">ComiLá</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html">
+                        <span class="nav-icon">🏠</span> Dashboard
+                    </a></li>
+                <li><a href="historico.html">
+                        <span class="nav-icon">📋</span> Histórico
+                    </a></li>
+                <li><a href="review.html">
+                        <span class="nav-icon">⭐</span> Reviews
+                    </a></li>
+                <li><a href="settings.html">
+                        <span class="nav-icon">⚙️</span> Configurações
+                    </a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn-theme" id="theme-toggle-sidebar">
+                    <span class="theme-icon">🌙</span>
+                    Alternar tema
+                </button>
+            </div>
+        </nav>
+
+        <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+        <main class="main-content">
+
+            <div class="page-header">
+                <h1>Configurações ⚙️</h1>
+                <p>Personaliza a tua experiência no ComiLá.</p>
+            </div>
+
+            <div class="settings-grid">
+
+                <!-- ── Cartão: Perfil ── -->
+                <div class="settings-card">
+                    <p class="settings-card-title">Perfil</p>
+                    <p class="settings-card-subtitle">Os teus dados pessoais guardados localmente.</p>
+
+                    <div class="form-group">
+                        <label for="input-nome">Nome</label>
+                        <input type="text" id="input-nome" placeholder="Seu Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-email">Email</label>
+                        <input type="email" id="input-email" placeholder="email@exemplo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-senha">Senha</label>
+                        <input type="password" id="input-senha" placeholder="Sua Senha">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-cidade">Cidade</label>
+                        <input type="text" id="input-cidade" placeholder="Informe sua Cidade.">
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-primario" id="btn-salvar">Guardar perfil</button>
+                    </div>
+                </div>
+
+                <!-- ── Cartão: Aparência ── -->
+                <div class="settings-card">
+                    <p class="settings-card-title">Aparência</p>
+                    <p class="settings-card-subtitle">Escolhe como o ComiLá deve ser exibido.</p>
+
+                    <div class="toggle-row">
+                        <div class="toggle-label-group">
+                            <span class="toggle-label">Modo Escuro</span>
+                            <span class="toggle-sublabel">Muda para um tema de fundo escuro em todas as páginas.</span>
+                        </div>
+                        <!-- O toggle chama alternarTema() do theme.js -->
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="toggle-knob"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ── Cartão: Zona de Perigo ── -->
+                <div class="settings-card danger-zone">
+                    <p class="settings-card-title">Zona de Perigo</p>
+                    <p class="settings-card-subtitle">Ações irreversíveis. Procede com cautela.</p>
+
+                    <button class="btn-outline btn-danger" id="btn-limpar-historico">
+                        🗑️ Apagar todo o histórico
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+
+</html>
