@@ -1,0 +1,295 @@
+/* ========================================
+   COMILÁ - GLOBAL STYLE
+======================================== */
+
+:root{
+
+    --primary-dark:#0F172A;
+    --primary-blue:#2563EB;
+    --accent-yellow:#FBBF24;
+    --error-red:#DC2626;
+
+    --bg-color:#F8FAFC;
+    --card-bg:#FFFFFF;
+
+    --text-main:#1E293B;
+    --text-muted:#64748B;
+
+    --sidebar-bg:#FFFFFF;
+
+    --border-color:#E2E8F0;
+
+    --hover-bg:#F1F5F9;
+
+    --shadow:
+    0 4px 6px rgba(0,0,0,.05);
+
+    --shadow-lg:
+    0 15px 30px rgba(0,0,0,.08);
+}
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+[data-theme="dark"]{
+
+    --bg-color:#020617;
+
+    --card-bg:#0F172A;
+
+    --text-main:#F8FAFC;
+
+    --text-muted:#94A3B8;
+
+    --sidebar-bg:#0F172A;
+
+    --border-color:#1E293B;
+
+    --hover-bg:#1E293B;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg-color);
+
+    color:var(--text-main);
+
+    font-family:'Inter',sans-serif;
+
+    transition:.3s;
+
+    overflow-x:hidden;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1,h2,h3,h4,h5,h6{
+
+    color:var(--text-main);
+
+    font-weight:600;
+}
+
+p{
+
+    color:var(--text-muted);
+}
+
+.text-muted-custom{
+
+    color:var(--text-muted)!important;
+}
+.wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+}
+
+.main-content{
+
+    flex:1;
+
+    overflow-y:auto;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn-primary-custom{
+
+    background:var(--primary-blue);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 20px;
+
+    font-weight:600;
+}
+
+.btn-primary-custom:hover{
+
+    opacity:.9;
+
+    color:white;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.form-control-custom{
+
+    background:var(--bg-color);
+
+    border:1px solid var(--border-color);
+
+    color:var(--text-main);
+
+    border-radius:12px;
+}
+
+.form-control-custom:focus{
+
+    border-color:var(--primary-blue);
+
+    box-shadow:
+    0 0 0 .25rem
+    rgba(37,99,235,.2);
+}
+
+/* ========================================
+   LOGIN
+======================================== */
+
+.login-wrapper{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+.login-card{
+
+    max-width:450px;
+
+    width:100%;
+
+    padding:40px;
+}
+
+.password-container{
+
+    position:relative;
+}
+
+.password-toggle{
+
+    position:absolute;
+
+    right:15px;
+
+    top:45px;
+
+    cursor:pointer;
+}
+
+/* ========================================
+   DATATABLES
+======================================== */
+
+[data-theme="dark"] table{
+
+    color:white;
+}
+
+/* ========================================
+   SETTINGS
+======================================== */
+
+.setting-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid var(--border-color);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+    }
+
+    .brand-info{
+
+        display:none;
+    }
+
+    .sidebar-link span{
+
+        display:none;
+    }
+
+    .search-bar{
+
+        width:250px;
+    }
+}
+
+@media(max-width:768px){
+
+    .wrapper{
+
+        flex-direction:column;
+    }
+
+    .sidebar{
+
+        width:100%;
+
+        flex-direction:row;
+
+        overflow-x:auto;
+    }
+
+    .sidebar-nav{
+
+        flex-direction:row;
+    }
+
+    .topbar{
+
+        padding:15px;
+    }
+
+    .search-bar{
+
+        width:100%;
+    }
+
+    .hero-section{
+
+        padding:30px;
+    }
+}
